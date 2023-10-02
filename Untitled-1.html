@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateusz Hauer</title>
+<script>
+//1. Napisz skrypt, który pobierze od użytkownika imię i wyświetli na ekranie: Witaj <tutaj pobrane imię>!
+    let imie = prompt("Podaj imię ");
+        alert("Witaj " + imie + "!");
+
+/*
+2. Napisz skrypt prostego kalkulatora, użytkownik podaje dwie liczby oraz z menu wybiera działanie. Wyświetl wynik wybranego działania na ekranie. 
+Menu: 1 - dodawanie, 2 - odejmowanie, 3 - mnożenie, 4 - dzielenie
+*/
+        let liczba1 = parseFloat(prompt("Podaj pierwszą iczbę "));
+        let liczba2 = parseFloat(prompt("Podaj drugą liczbę "));
+        let operacja = parseInt(prompt("Wybierz operację: 1 - dodawanie, 2 - odejmowanie, 3 - mnożenie, 4 - dzielenie"));
+        let wynik
+        switch(operacja)
+        {
+            case 1:
+                wynik = liczba1 + liczba2;
+                break;
+            case 2:
+                wynik = liczba1 - liczba2;
+                break;
+            case 3:
+                wynik = liczba1 * liczba2;
+                break;
+            case 4:
+                wynik = liczba1 / liczba2;
+                break;
+            default:
+                alert("Nieprawidłowy wybór operacji.");
+        }
+        alert("Wynik to: " + wynik);
+
+//3. Napisz skrypt, który pobierze wzrost w cm od użytkownika i wyświetli informację czy jest wysoki, średni, niski. Wysoki > 180, średni > 165 i < 180, niski < 165.
+        let wzrost = parseInt(prompt("Podaj swój wzrost w cm "));
+        if(wzrost > 180)
+        {
+            alert("Jesteś wysoki");
+        }
+        if(wzrost >= 165 && wzrost <= 180)
+        {
+            alert("Jesteś średniego wzrostu");
+        }
+        if(wzrost < 165)
+        {
+            alert("Jesteś niski");
+        }
+
+//4. Napisz skrypt, który pobierze od użytkownika rok urodzenia i wyświetli na ekranie jego wiek.
+        let rokUrodzenia1 = parseInt(prompt("Podaj swój rok urodzenia "));
+        let wiek = 2023 - rokUrodzenia1;
+        alert("Obecnie masz " + wiek + " lata/lat");
+
+//5. Napisz skrypt, który pobierze rok urodzenia od użytkownika i wyświetli informację czy użytkownik jest pełnoletni lub nie.
+        let rokUrodzenia = parseInt(prompt("Podaj swój rok urodzenia "));
+        if(rokUrodzenia > 2005)
+        {
+            alert("Jesteś niepełnoletni");
+        }
+        else
+        {
+            alert("Jesteś pełnoletni");
+        }
+
+/*
+6. Napisz skrypt, przeliczający temperaturę z C na F i z F na C. Użytkownik najpier wybiera na jakie stopnie chce zamienić i później podaje temperaturę do zamiany. 
+Stopnie Fahrenheita zamienisz na stopnie Celsjusza używając wzoru: (°F - 32) x 5/9 = °C. 
+Stopnie Celsjusza zamienisz na stopnie Fahrenheita używając wzoru: (°C x 9/5) + 32 = °F
+*/
+        let wybór = parseInt(prompt("Wybierz zamianę: 1 - Celsjusz na Fanhrenheit, 2 - Fanherenheit na Celsjusz"));
+        let temperatura = parseFloat(prompt("Podaj temperaturę:"));
+        let wynik1;
+        if(wybór == 1){
+            wynik1 = (temperatura * 9/5) + 32;
+            alert("Temperatura w Fahrenheitach to: " + wynikk + " stopni Fahrenheita");
+        }
+        else if(wybór == 2){
+            wynik1 = (temperatura - 32) * 5/9;
+            alert("Temperatura w stopniach Celsjusza to: " + wynikk + " stopni Celsjusza");
+        }
+
+</script>
+</head>
+<body>
+</body>
+</html>
